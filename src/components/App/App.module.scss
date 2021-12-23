@@ -1,0 +1,38 @@
+@import '../style/constants.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $background-color;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    color: $text;
+}
+
+.app {
+
+    &-wrapper {
+        width: 100%;
+        min-height: 100vh;
+        box-sizing: border-box;
+        padding-bottom: 50px;
+
+        &__logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 32px;
+            padding-bottom: 24px;
+        }
+
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 754px;
+            margin: 0 auto;
+        }
+    }
+}

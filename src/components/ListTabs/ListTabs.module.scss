@@ -1,0 +1,42 @@
+@import '../style/constants.scss';
+
+.list-tabs {
+    width: 502px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &__item {
+        outline: none;
+        width: 33.3333333%;
+        background-color: $white;
+        border: 1px solid $border;
+        border-right: none;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 20px;
+        color: $text;
+
+        &:hover {
+            cursor: pointer;
+        };
+
+        &--active {
+            border: 1px solid $blue;
+            background-color: $blue;
+            color: $white;
+        };
+
+        &:first-child {
+            border-radius: 5px 0 0 5px;
+        };
+        &:last-child {
+            border-radius: 0 5px 5px 0;
+            border-right: 1px solid $border;
+        };
+    };
+};
