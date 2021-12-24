@@ -3,7 +3,7 @@
 .filter-menu {
 
     &__item {
-        padding: 10px 20px;
+        padding: 10px 20px 10px 50px;
         font-size: 13px;
         font-weight: 400;
         line-height: 20px;
@@ -12,5 +12,35 @@
     &__item:hover {
         cursor: pointer;
         background-color: $hover;
+    };
+
+    &__checkbox {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+
+        &--custom {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 1px solid $gray;
+            border-radius: 2px;
+            margin-left: -30px;
+        };
+
+        &:checked + .filter-menu__checkbox--custom {
+            background-image: url(./mark.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            border-color: $blue;
+        };
+
+        &:focus + .filter-menu__checkbox--custom {
+            outline: 1px solid lightgreen;
+        };
     };
 };
